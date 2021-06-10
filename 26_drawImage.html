@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <style type="text/css">
+      canvas {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="800" height="800" id="canvas"></canvas>
+    <img src="click.png" alt="" id="image" style="display: none" />
+    <script type="text/javascript">
+      // Camvas
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      var img = document.getElementById("image");
+      img.onload = function () {
+        ctx.drawImage(img, 0, 0, 100, 120, 250, 250, 50, 100);
+      };
+    </script>
+  </body>
+</html>

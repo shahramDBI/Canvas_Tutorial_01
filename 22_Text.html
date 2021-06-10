@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <style type="text/css">
+      canvas {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="800" height="800" id="canvas"></canvas>
+
+    <script type="text/javascript">
+      // Camvas
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      //   LinearGradient
+      var g = ctx.createLinearGradient(150, 500, 200, 500);
+      g.addColorStop(0, "yellow");
+      g.addColorStop(1, "green");
+      //   Text
+      ctx.fillStyle = g;
+      //   Border
+      ctx.strokeStyle = "red";
+      ctx.lineWidth = 2;
+      ctx.font = 'normal normal 80px "Arial"';
+      ctx.textAlign = "center";
+      ctx.fillText("fillText", 150, 100);
+      ctx.strokeText("strokeText", 200, 200);
+
+      ctx.fillText("Sample", 150, 400);
+      ctx.strokeText("Sample", 150, 400);
+    </script>
+  </body>
+</html>

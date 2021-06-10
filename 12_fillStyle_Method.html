@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <style type="text/css">
+      canvas {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="800" height="800" id="canvas"></canvas>
+
+    <script type="text/javascript">
+      // Camvas
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      //   Start Draw
+      ctx.beginPath();
+      for (var column = 0, color = 0; column < 20; column++) {
+        for (var row = 0; row < 20; row++) {
+          ctx.fillStyle = "hsl(" + Math.random() * 360 + ", 100%,50%)";
+          ctx.fillRect(column * 25, row * 25, 20, 20);
+          color += 20;
+        }
+      }
+    </script>
+  </body>
+</html>
